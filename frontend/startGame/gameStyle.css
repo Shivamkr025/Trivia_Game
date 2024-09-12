@@ -1,0 +1,61 @@
+
+*{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.player-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+.question-class{
+    height: 5rem;
+    width: 42%;
+    background-color: rgb(230, 230, 230);
+    border-radius: 5px;
+}
+
+
+#optionDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    max-width: 600px; 
+    margin: 20px auto; 
+}
+
+.optionBtn {
+    flex: 1 1 calc(50% - 40px);
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.end-option{
+    display: flex;
+    justify-content: center;
+    margin-left: 6%;
+}
+
+@media (max-width: 768px) {
+    .question-class {
+        width: 90%; 
+        font-size: 1.3rem; 
+    }
+    .end-option{
+        display: flex;
+        justify-content: start;
+        margin-left: -5%;
+    }
+}
