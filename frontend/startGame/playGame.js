@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const optionDisplay = document.querySelector("#optionDisplay")
     const questionDisplay = document.querySelector("#questionDisplay")
-    
+
     let questionArray = []
     let count = 0
     let score = [0 , 0]
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(level);
 
         try {
-            const respone = await fetch("http://localhost:3000/show/question")
+            const respone = await fetch("https://trivia-game-2.onrender.com/show/question")
             const data = await respone.json()
 
             const getQuestion = data.show
