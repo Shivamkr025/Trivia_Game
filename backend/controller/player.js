@@ -1,4 +1,4 @@
-import { Game, Player, Question } from "../model/gameModel.js";
+import { Game, Player } from "../model/gameModel.js";
 
 
 const createPlayer = async (req, res) => {
@@ -17,7 +17,7 @@ const createPlayer = async (req, res) => {
         });
 
         await newGame.save()
-        res.status(201).json({game: newGame });
+        res.status(201).json({ game: newGame });
 
     } catch (error) {
         console.log(error);

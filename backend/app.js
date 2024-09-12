@@ -1,21 +1,23 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import triviaRouter from './src/router/triviaRoute.js';
+import triviaRouter from './router/triviaRoute.js';
 
 const app = express()
 const PORT = 3000
 
 app.use(cors({
     origin: true,
-    methods:['GET', 'POST', 'PUT', 'DELETE'], 
-    credentials: true 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
 }))
 
 app.use(express.json())
 app.use('/', triviaRouter)
 
-mongoose.connect('mongodb://localhost:27017/Trivia-Battle')
+const DBConnect = "mongodb+srv://shivam22:shivam22@shivam.n1mrvon.mongodb.net/Trivia-Battle?retryWrites=true&w=majority&appName=shivam"
+
+mongoose.connect(DBConnect)
     .then(() => {
         console.log("connecting successfully...");
     }).catch((error) => {
