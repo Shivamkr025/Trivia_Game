@@ -18,8 +18,6 @@ const questionSchema = new mongoose.Schema({
     correctAnswer: { type: String },
 })
 
-const Player = mongoose.model('player', nameSchema)
-
 const Question = mongoose.model('Question', questionSchema)
 
-export { Player, Question }
+export { Question }
